@@ -5,9 +5,12 @@
     --color-heading-dark: #232e35;
     --color-secondary-dark: #7e74f1; 
     --color-secondary-light: #9b93f4;
+    /* --color-secondary-dark-blue: #0000ee; */
     --color-bg-1: #ffffff;
     --color-bg-2: #fbfbfb;
-    --box-shadow: 0px 5px 3px -6px rgba(0,0,0,0.7);
+    --bg-card: #eae6fe;
+    --color-icons: #551a8b;
+    --box-shadow: 0px 6px 6px -6px rgba(0,0,0,0.7);
     --box-shadow-light: 0px 0px 2px rgba(0,0,0,0.2);
     --transition: all 0.5s ease;
 }
@@ -45,10 +48,9 @@ a:hover{
     height: 100vh;
     background-color: var(--color-bg-1);
     margin-top: 15px;
-
 }
 
-/* ================Top Nav bar Start========== */
+/* ===================================START OF TOP HEADER============================================== */
 .top-header{
     display: flex;
     justify-content: space-around;
@@ -63,21 +65,23 @@ a:hover{
     line-height: 19px;
 }
 
-.top-header .logo img{
+/* ----------------Start Logo Container-------------------- */
+.top-header .logo-container img{
     height: 70px;
     width: 70px;
     border-radius: 100%;
     margin: 4px auto;
 }
-.top-header .logo span .cap{
+.top-header .logo-container span .cap{
     font-size: 35px;
 }
-.top-header .logo span{
+.top-header .logo-container span{
     margin-left: 5px;
     color: var(--color-heading-dark);
     font-weight: 800;
 }
 
+/* ---------------Top Nav bar---------------------------- */
 .top-header .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -87,7 +91,9 @@ a:hover{
     color: var(--color-text-dark);
 }
 
-.top-header .btn-resume button{
+/* ---------------Top Header Resume Button------------------ */
+.top-header .btn-resume button,
+.about-page .about-column-1 .description .btn-resume-1 button{
     background-color: var(--color-bg-1);
     color: var(--color-text-dark);
     border: none;
@@ -99,34 +105,42 @@ a:hover{
     font-weight: 400;
     line-height: 19px;
 }
-/* ================Top Nav bar End========== */
 
-/* ================Main Content Start========== */
+/* -----------------------Start of Toggle Button----------------- */
+.toggle-btn{
+    display: none;
+}
+
+/* ====================================END OF TOP HEADER====================================== */
+
+/* ======================================== START OF MAIN CONTENT CONTAINER=========================== */
 .main-content-container{
-    /* height: 100vh; */
     background-color: var(--color-bg-1);
 }
-.about{
-    display: flex;
-    justify-content: flex-start;
-    height: calc(100vh - 15vh);
+
+/* ------------------------About Page-------------------- */
+.main-content-container .about-page{
+    display: grid;
+    grid-template-columns: 4.5fr 7.5fr;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: calc(100vh - 15vh);
 }
-.about .about-column-1{
+.about-page .about-column-1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    margin-left: 20px;
-    /* border: 1px solid black; */
+    /* position: relative; */
+    max-height: calc(100vh - 20vh);
 }
 
-.about .salutation{
+.about-page .salutation{
     letter-spacing: 2px;
     color: var(--color-text-light);
     font-size: 16px;
 }
 
-.about .salutation .span-1{
+.about-page .salutation .span-1{
     display: inline-block;
     font-weight: 800;
     width: 30px;
@@ -136,7 +150,7 @@ a:hover{
     text-align: center;
 }
 
-.about .fullName{
+.about-page .fullName{
     font-family: serif;
     font-size: 40px;
     font-weight: 700;
@@ -146,48 +160,156 @@ a:hover{
     padding-top: 30px;
 
 }
-.about .fullName span{
+.about-page .fullName span{
     color: var(--color-secondary-dark);
     letter-spacing: 4px;
     margin-left: 22px;
 }
-.about .about-column-1 .description {
-    /* width: 55%; */
+.about-page .about-column-1 .description {
     color: var(--color-text-light);
     line-height: 30px;
     font-family: serif;
     text-align: center;
 }
+.about-page .about-column-1 .description .btn-resume-1 button{
+    display: none;
+    margin-bottom: 20px;
+    background-color: var(--color-secondary-dark);
+    color: var(--color-bg-1);
+}
+.about-page .about-column-1 .description .btn-resume-1 a{
+    color: var(--color-bg-1);
+    padding: 40px;
+}
 
-.about .about-column-1 .social-media{
+.about-page .about-column-1 .social-media{
     display: flex;
     justify-content: space-around;
     width: 100%;
-    position: absolute;
     bottom: calc(50px);
-    margin-bottom: 0px;
+    margin-top: 150px;
     font-size: 25px;
 }
-
-.about-column-2{
-    width: 100%;
+.about-page .about-column-1 .social-media .bi{
+    color: var(--color-icons);
+}
+.about-page .about-column-1 .social-media .bi:hover{
+    color: var(--color-text-dark);
 }
 
-/* ================Main Content Start========== */
+.about-page .about-column-2{
+    position: relative;
+    height: calc(100vh - 20vh);
+    margin-left: 20px;
+    text-align: center;
+}
+.about-page .about-column-2 .card-1,
+.about-page .about-column-2 .card-2{
+    position: absolute;
+    top: 11%;
+    left: 25%;
+    width: calc(350px);
+    height: 400px;
+    border-radius: 8px;
+}
 
-/* ================Media Queries Start========== */
+.about-page .about-column-2 .card-1{
+    background-color: var(--color-secondary-dark);
+    transform: rotate(-10deg);
+    /* z-index: 0; */
+}
+.about-page .about-column-2 .card-2{
+    background: url(../../public/images/crp.jpg);
+    background-position: center;
+    background-size: cover;
+    /* z-index: 1; */
+}
+.about-page .about-column-2 .card-1:hover{
+    transform: rotate(-7deg);
+    transition: 300ms;
+}
+/* =======================End of About Page================================== */
+
+
+/* ==============================================END OF MAIN CONTENT CONTAINER==================================== */
+
+
+/* ================START OF MEDIA QUERIES========== */
 @media screen and (orientation: portrait) {
-    
-}
-
-@media screen and (orientation: landscape) {
-    body{
-        margin: 0px;
-        padding: 0px;
+    .main-section-container{
+        display: grid;
+        grid-template-columns: 12fr;
+        box-sizing: border-box;
     }
 
-    
+/* ------------------------Start Top Header-------------------- */
+    .top-header{
+        grid-row: 1;
+        z-index: 1;
+    }
+    .logo-container{
+        display: flex;
+        justify-content: space-between;
+        min-width: 100%;
+    }
+    .toggle-btn{
+        display: block;
+        font-size: 42px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .top-header .nav-bar, .btn-resume{
+        display: none;
+    }
+
+/* ------------------------Start Main Content Container-------------------- */
+    .main-content-container{
+        grid-row: 2;
+        
+    }
+    .main-content-container .about-page{
+        display: grid;
+        grid-template-columns: 12fr;
+        margin-top: 20px;
+    }
+    .about-page .about-column-1{
+        grid-row: 2;
+        padding: 13px;
+    }
+    .about-page .about-column-1 .fullName {
+        line-height: 30px;
+        padding: 12px;
+    }
+    .about-page .about-column-1 .description .btn-resume-1 button{
+        display: block;
+        margin: 20px auto;
+    }
+    .about-page .about-column-1 .description .btn-resume-1 button:hover{
+        background-color: var(--color-icons);
+        transition: 3s;
+    }
+    .about-page .about-column-1 .description .btn-resume-1 button a:hover{
+        text-decoration: none;
+        border-bottom: none;
+    }
+    .about-page .about-column-2{
+        grid-row: 1;
+        height: calc(100vh - 50vh);
+        margin-left: 0px auto;
+    }
+    .about-page .about-column-2 .card-1,
+    .about-page .about-column-2 .card-2{
+        left: 0%;
+        top: 0%;
+    }
+    .about-page .about-column-1 .social-media{
+        margin-top: 5px;
+    }
+/* ------------------------Start Footer Content Container-------------------- */  
+
 }
+
+@media screen and (orientation: landscape) {}
 /* ================Media Queries End========== */
 
 
