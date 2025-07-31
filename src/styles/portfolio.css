@@ -5,25 +5,19 @@
     --color-heading-dark: #232e35;
     --color-secondary-dark: #7e74f1; 
     --color-secondary-light: #9b93f4;
-    /* --color-secondary-dark-blue: #0000ee; */
     --color-bg-1: #ffffff;
     --color-bg-2: #fbfbfb;
     --bg-card: #eae6fe;
     --color-icons: #551a8b;
     --box-shadow: 0px 6px 6px -6px rgba(0,0,0,0.7);
     --box-shadow-light: 0px 0px 2px rgba(0,0,0,0.2);
-    --transition: all 0.5s ease;
-}
-html{
-    box-sizing: border-box;
-    margin: auto;
-    font-size: 1.25em;
-    color: #333;
-    line-height: 1.4;
+    --transition: all 0.3s ease;
 }
 
 * {
-    box-sizing: inherit;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h4, h5, h6{
@@ -44,273 +38,194 @@ a:hover{
     transition: var(--transition);
 }
 
-.main-section-container{
-    height: 100vh;
-    background-color: var(--color-bg-1);
-    margin-top: 15px;
-}
-
-/* ===================================START OF TOP HEADER============================================== */
-.top-header{
+/* ----------------Start Header Container-------------------- */
+.top-header-container{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100vw;
     color: var(--color-text-dark);
     box-shadow: var(--box-shadow);
     position: sticky;
     top: 0px;
+    margin-top: 20px;
     font-family: sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
+    overflow: auto;
+    z-index: 1000;
 }
-
-/* ----------------Start Logo Container-------------------- */
-.top-header .logo-container img{
+.top-header-container .logo-container div{
+    display: flex;
+    position: relative;
+    height: 90px;
+    width: 150px;
+}
+.top-header-container .logo-container div img{
+    display: inline-block;
     height: 70px;
     width: 70px;
     border-radius: 100%;
     margin: 4px auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
-.top-header .logo-container span .cap{
-    font-size: 35px;
-}
-.top-header .logo-container span{
-    margin-left: 5px;
+.top-header-container .logo-container div .name{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 70px;
     color: var(--color-heading-dark);
     font-weight: 800;
 }
-
-/* ---------------Top Nav bar---------------------------- */
-.top-header .nav-bar{
+.top-header-container .logo-container .name .cap{
+    font-size: 35px;
+}
+.top-header-container .nav-bar-list{
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 50%);
+    width: calc(1200px - 700px);
+    padding: 10px;
+    overflow: auto;
 }
-.top-header .nav-bar span a{
+.top-header-container .nav-bar-list span a{
     color: var(--color-text-dark);
+    font-size: 17px;
 }
-
-/* ---------------Top Header Resume Button------------------ */
-.top-header .btn-resume button,
-.about-page .about-column-1 .description .btn-resume-1 button{
+.top-header-container .nav-bar-list span a:hover{
+    color: var(--color-secondary-dark);
+}
+.top-header-container .resume-download-btn button{
     background-color: var(--color-bg-1);
     color: var(--color-text-dark);
     border: none;
+    box-shadow: var(--box-shadow-light);
     padding: 10px;
     border-radius: 5px;
-    box-shadow: var(--box-shadow-light);
     font-family: sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
 }
 
-/* -----------------------Start of Toggle Button----------------- */
-.toggle-btn{
-    display: none;
-}
-
-/* ====================================END OF TOP HEADER====================================== */
-
-/* ======================================== START OF MAIN CONTENT CONTAINER=========================== */
+/* ----------------Start Main Content Container-------------------- */
 .main-content-container{
-    background-color: var(--color-bg-1);
+    margin: 10px;
+    padding: 2px;
+    border-radius: 8px;
+    height: 100vh;
+    overflow: auto;
 }
-
-/* ------------------------About Page-------------------- */
 .main-content-container .about-page{
     display: grid;
-    grid-template-columns: 4.5fr 7.5fr;
-    padding: 20px;
-    box-sizing: border-box;
-    max-height: calc(100vh - 15vh);
+    grid-template-columns: 5fr 7fr;
+    border-radius: 4px;
+    height: calc(100vh - 20vh);
 }
-.about-page .about-column-1{
+.main-content-container .about-page .about-column-1{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* position: relative; */
-    max-height: calc(100vh - 20vh);
-}
+    justify-content:center;
 
-.about-page .salutation{
+}
+.main-content-container .about-page .about-column-1 .salutation .span-1{
+    display: inline-block;
+    border: 1px solid var(--color-text-light);
+    width: 30px;
+    margin-right: 10px;
+    margin-bottom: 3px;
+    font-weight: 800;
+}
+.main-content-container .about-page .about-column-1 .salutation{
     letter-spacing: 2px;
     color: var(--color-text-light);
     font-size: 16px;
 }
-
-.about-page .salutation .span-1{
-    display: inline-block;
-    font-weight: 800;
-    width: 30px;
-    border: 1px solid var(--color-text-light);
-    margin-right: 10px;
-    margin-bottom: 3px;
-    text-align: center;
-}
-
-.about-page .fullName{
+.main-content-container .about-page .about-column-1 .fullName{
     font-family: serif;
     font-size: 40px;
     font-weight: 700;
-    line-height: 55px;
     letter-spacing: 2px;
     color: var(--color-heading-dark);
-    padding-top: 30px;
-
+    line-height: 55px;
+    padding: 30px;
 }
-.about-page .fullName span{
+.main-content-container .about-page .about-column-1 .fullName span{
     color: var(--color-secondary-dark);
     letter-spacing: 4px;
     margin-left: 22px;
 }
-.about-page .about-column-1 .description {
+.main-content-container .about-page .about-column-1 .description {
     color: var(--color-text-light);
     line-height: 30px;
     font-family: serif;
     text-align: center;
+    font-size: 22px;
 }
-.about-page .about-column-1 .description .btn-resume-1 button{
-    display: none;
-    margin-bottom: 20px;
-    background-color: var(--color-secondary-dark);
-    color: var(--color-bg-1);
-}
-.about-page .about-column-1 .description .btn-resume-1 a{
-    color: var(--color-bg-1);
-    padding: 40px;
-}
-
-.about-page .about-column-1 .social-media{
+.main-content-container .about-page .about-column-1 .social-media{
     display: flex;
     justify-content: space-around;
-    width: 100%;
-    bottom: calc(50px);
     margin-top: 150px;
     font-size: 25px;
 }
-.about-page .about-column-1 .social-media .bi{
+.main-content-container .about-page .about-column-1 .social-media .bi{
     color: var(--color-icons);
 }
-.about-page .about-column-1 .social-media .bi:hover{
+.main-content-container .about-page .about-column-1 .social-media .bi:hover{
     color: var(--color-text-dark);
 }
-
-.about-page .about-column-2{
+.main-content-container .about-page .about-column-2{
+    margin-left: 2px;
     position: relative;
-    height: calc(100vh - 20vh);
-    margin-left: 20px;
-    text-align: center;
+    height: calc(100vh - 22vh);
 }
-.about-page .about-column-2 .card-1,
-.about-page .about-column-2 .card-2{
-    position: absolute;
-    top: 11%;
-    left: 25%;
-    width: calc(350px);
+.main-content-container .about-page .about-column-2 .card-1,
+.main-content-container .about-page .about-column-2 .card-2{
+    width: 300px;
     height: 400px;
+    margin: 50px auto;
     border-radius: 8px;
+    position: absolute;
+    left: 25%;
 }
-
-.about-page .about-column-2 .card-1{
+.main-content-container .about-page .about-column-2 .card-1{
     background-color: var(--color-secondary-dark);
     transform: rotate(-10deg);
-    /* z-index: 0; */
+    z-index: 0;
 }
-.about-page .about-column-2 .card-2{
+.main-content-container .about-page .about-column-2 .card-2{
     background: url(../../public/images/crp.jpg);
     background-position: center;
     background-size: cover;
-    /* z-index: 1; */
+    z-index: 1;
 }
-.about-page .about-column-2 .card-1:hover{
+.main-content-container .about-page .about-column-2 .card-1:hover{
     transform: rotate(-7deg);
     transition: 300ms;
 }
-/* =======================End of About Page================================== */
-
-
-/* ==============================================END OF MAIN CONTENT CONTAINER==================================== */
 
 
 /* ================START OF MEDIA QUERIES========== */
+
 @media screen and (orientation: portrait) {
-    .main-section-container{
-        display: grid;
-        grid-template-columns: 12fr;
-        box-sizing: border-box;
-    }
-
-/* ------------------------Start Top Header-------------------- */
-    .top-header{
-        grid-row: 1;
-        z-index: 1;
-    }
-    .logo-container{
-        display: flex;
-        justify-content: space-between;
-        min-width: 100%;
-    }
-    .toggle-btn{
-        display: block;
-        font-size: 42px;
-        margin-right: 10px;
-        margin-top: 10px;
-    }
-    .top-header .nav-bar, .btn-resume{
-        display: none;
-    }
-
-/* ------------------------Start Main Content Container-------------------- */
-    .main-content-container{
-        grid-row: 2;
-        
-    }
     .main-content-container .about-page{
-        display: grid;
-        grid-template-columns: 12fr;
-        margin-top: 20px;
+        grid-template-columns: 12fr;   
+        align-items: center;
     }
-    .about-page .about-column-1{
-        grid-row: 2;
-        padding: 13px;
-    }
-    .about-page .about-column-1 .fullName {
-        line-height: 30px;
-        padding: 12px;
-    }
-    .about-page .about-column-1 .description .btn-resume-1 button{
-        display: block;
-        margin: 20px auto;
-    }
-    .about-page .about-column-1 .description .btn-resume-1 button:hover{
-        background-color: var(--color-icons);
-        transition: 3s;
-    }
-    .about-page .about-column-1 .description .btn-resume-1 button a:hover{
-        text-decoration: none;
-        border-bottom: none;
-    }
-    .about-page .about-column-2{
-        grid-row: 1;
-        height: calc(100vh - 50vh);
-        margin-left: 0px auto;
-    }
-    .about-page .about-column-2 .card-1,
-    .about-page .about-column-2 .card-2{
-        left: 0%;
-        top: 0%;
-    }
-    .about-page .about-column-1 .social-media{
-        margin-top: 5px;
-    }
-/* ------------------------Start Footer Content Container-------------------- */  
+.main-content-container .about-page .about-column-1 .fullName{
+    font-size: 25px;
+}
+.main-content-container .about-page .about-column-2 .card-1,
+.main-content-container .about-page .about-column-2 .card-2{
+    margin: 25px auto;
+    width: 250px;
+    height: 300px;
+    left: 6%; 
+}
+.main-content-container .about-page .about-column-2 .card-1{
+    transform: rotate(-5deg);
+}
 
 }
 
 @media screen and (orientation: landscape) {}
 /* ================Media Queries End========== */
-
-
-
