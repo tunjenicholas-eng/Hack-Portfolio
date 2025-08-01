@@ -84,6 +84,9 @@ a:hover{
     color: var(--color-heading-dark);
     font-weight: 800;
 }
+.top-header .logo-container span .cap{
+    font-size: 35px;
+}
 
 /* ---------------Top Nav bar---------------------------- */
 .top-header .nav-bar{
