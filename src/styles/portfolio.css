@@ -114,13 +114,11 @@ a:hover{
 
 /* ----------------Start Main Content Container-------------------- */
 .main-content-container{
-    /* margin: 10px; */
-    /* padding: 2px; */
-    /* border-radius: 8px; */
     height: 85vh;
     position: absolute;
     overflow: auto;
 }
+/* ----------------Start About Page Container-------------------- */
 .main-content-container .about-page{
     display: grid;
     grid-template-columns: 5fr 7fr;
@@ -131,13 +129,13 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content:center;
-    /* border: 2px solid red; */
+    padding-left: 10px;
 
 }
 .main-content-container .about-page .about-column-1 .salutation .span-1{
     display: inline-block;
     border: 1px solid var(--color-text-light);
-    width: 30px;
+    width: 20px;
     margin-right: 10px;
     margin-bottom: 3px;
     font-weight: 800;
@@ -166,7 +164,7 @@ a:hover{
     line-height: 30px;
     font-family: serif;
     text-align: center;
-    font-size: 22px;
+    font-size: 19px;
 }
 .main-content-container .about-page .about-column-1 .social-media{
     display: flex;
@@ -216,30 +214,150 @@ a:hover{
     height: 85vh;
     padding: 20px;
 }
-/* ----------------Start Skills page Container-------------------- */
-.main-content-container .skills-page{
-    background-color: var(--color-bg-1);
-    height: 85vh;
-    padding: 20px;
+.main-content-container .education-page .learning-path-heading .line{
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    margin: 5px 8px ;
+    background-color: var(--color-text-light);
+}
+.main-content-container .education-page .learning-path-heading .text{
+    letter-spacing: 7px;
+    color: var(--color-text-light);
+    font-size: 13px;
+}
+.main-content-container .education-page .learning-path-heading .title{
+    color: var(--color-text-dark);
+    padding-bottom: 20px;
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+.main-content-container .education-page .education-skills-container{
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    padding: 15px;
+    height: 57vh;
+}
+.main-content-container .education-page .education-skills-container .education-container{
+    display: flex;
+    justify-content: left;
+}
+.main-content-container .education-page .education-skills-container .education-container .path{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 300px;
+    margin-right: 5px;
+}
+.main-content-container .education-page .education-skills-container .education-container .path .circle{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--bg-card);
+    border-radius: 100%;
+    padding: 0px;
+}
+.main-content-container .education-page .education-skills-container .education-container .path .line{
+    display: inline-block;
+    width: 2px;
+    height: 127px;
+    background-color: var(--bg-card);
+    padding: 0px;
+    margin-left: 7px;
+}
+.main-content-container .education-page .education-skills-container .education-container .campus-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main-content-container .education-page .education-skills-container .education-container .campus-container .campus-name h3{
+    color: var(--color-heading-light);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: -7px;
+}
+.main-content-container .education-page .education-skills-container .education-container .campus-container .campus-name .course{
+    color: var(--color-text-light);
+}
+.main-content-container .education-page .education-skills-container .education-container .campus-container .period{
+    padding-top: 20px;
+    color: var(--color-heading-light);
+    font-weight: 400;
+    margin-bottom: 64px;
+}
+.main-content-container .education-page .education-skills-container .skills-container .skills-description-text{
+    font-size: 19px;
+    line-height: 30px;
+    color: var(--color-text-light);
+    font-family: serif;
+    margin-bottom: 60px;
+    text-align: justify;
+}
+.main-content-container .education-page .education-skills-container .skills-container .skill-title-container .skill-title{
+    padding-bottom: 40px;
+}
+.main-content-container .education-page .education-skills-container .skills-container .skill-title-container .skill-title-heading{
+    padding: 5px 0px 5px 0px;
+    font-size: 16px;
+    color: var(--color-heading-light);
+    letter-spacing: 1px;
+}
+.main-content-container .education-page .education-skills-container .skills-container .skill-title-container .progress-container{
+    width: 100%;
+    height: 7px;
+    background-color: var(--bg-card);
+    overflow: hidden;
+}
+.main-content-container .education-page .education-skills-container .skills-container .skill-title-container .progress-bar{
+    height: 100%;
+    background-color: var(--color-secondary-dark);
+}
+.main-content-container .education-page .education-skills-container .skills-container .cv-download-btn{
+    width: 50%;
+    margin: 15px auto;
+}
+.main-content-container .education-page .education-skills-container .skills-container .cv-download-btn button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 2px;
+    background-color: var(--color-secondary-dark);
+    border: none;
+}
+.main-content-container .education-page .education-skills-container .skills-container .cv-download-btn button a{
+    color: var(--color-bg-1);
+    font-size: 18px;
+}
+.main-content-container .education-page .education-skills-container .skills-container .cv-download-btn button:hover{
+    background-color: var(--color-secondary-light);
+    transition: var(--transition);
+}
+.main-content-container .education-page .education-skills-container .skills-container .cv-download-btn button a:hover{
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-bg-1);
+    padding-bottom: 2px;
+    transition: var(--transition);
 }
 
 /* ----------------Start Interest page Container-------------------- */
 .main-content-container .interest-page{
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-1);
     height: 85vh;
     padding: 20px;
 }
 
 /* ----------------Start Projects page Container-------------------- */
 .main-content-container .project-page{
-    background-color: var(--color-bg-1);
+    background-color: var(--color-bg-2);
     height: 85vh;
     padding: 20px;
 }
 
 /* ----------------Start Contact page Container-------------------- */
 .main-content-container .contact-page{
-    background-color: var(--color-bg-2);
+    background-color: var(--color-bg-1);
     height: 85vh;
     padding: 20px;
 }
