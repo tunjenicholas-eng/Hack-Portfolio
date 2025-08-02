@@ -59,6 +59,8 @@ a:hover{
     overflow: auto;
     z-index: 1000;
 }
+
+/* Logo */
 .top-header-container .logo-container div{
     display: flex;
     position: relative;
@@ -86,6 +88,8 @@ a:hover{
 .top-header-container .logo-container .name .cap{
     font-size: 35px;
 }
+
+/* Navigation List */
 .top-header-container .nav-bar-list{
     display: flex;
     justify-content: space-between;
@@ -100,6 +104,8 @@ a:hover{
 .top-header-container .nav-bar-list span a:hover{
     color: var(--color-secondary-dark);
 }
+
+/* Download Resume Button */
 .top-header-container .resume-download-btn button{
     background-color: var(--color-bg-1);
     color: var(--color-text-dark);
@@ -126,6 +132,8 @@ a:hover{
     border-radius: 4px;
     height: calc(100vh - 15vh);
 }
+
+/* About page Column 1 */
 .main-content-container .about-page .about-column-1{
     display: flex;
     flex-direction: column;
@@ -179,6 +187,8 @@ a:hover{
 .main-content-container .about-page .about-column-1 .social-media .bi:hover{
     color: var(--color-text-dark);
 }
+
+/* About Page Column 2 */
 .main-content-container .about-page .about-column-2{
     margin-left: 2px;
     position: relative;
@@ -215,6 +225,8 @@ a:hover{
     height: 85vh;
     padding: 20px;
 }
+
+/* Education Page Heading Section */
 .main-content-container .education-page .learning-path-heading .line{
     display: inline-block;
     width: 20px;
@@ -234,12 +246,16 @@ a:hover{
     letter-spacing: 1px;
     margin-left: 5px;
 }
+
+/* Education-Skills Container */
 .main-content-container .education-page .education-skills-container{
     display: grid;
     grid-template-columns: 5fr 7fr;
     padding: 15px;
     height: 57vh;
 }
+
+/* Education Container */
 .main-content-container .education-page .education-skills-container .education-container{
     display: flex;
     justify-content: left;
@@ -289,6 +305,8 @@ a:hover{
     font-weight: 400;
     margin-bottom: 64px;
 }
+
+/* Skills Container */
 .main-content-container .education-page .education-skills-container .skills-container .skills-description-text{
     font-size: 19px;
     line-height: 30px;
@@ -316,6 +334,8 @@ a:hover{
     height: 100%;
     background-color: var(--color-secondary-dark);
 }
+
+/* Download CV Button */
 .main-content-container .education-page .education-skills-container .skills-container .cv-download-btn{
     width: 50%;
     margin: 15px auto;
@@ -496,7 +516,100 @@ a:hover{
 .main-content-container .project-page{
     background-color: var(--color-bg-2);
     height: 85vh;
-    padding: 20px;
+    padding: 25px;
+}
+.main-content-container .project-page .project-page-heading .line{
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    margin: 5px 8px ;
+    background-color: var(--color-text-light);
+}
+.main-content-container .project-page .project-page-heading .text{
+    letter-spacing: 7px;
+    color: var(--color-text-light);
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.main-content-container .project-page .project-page-heading .title{
+    color: var(--color-text-dark);
+    padding-bottom: 10px;
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    margin-top: 14px;
+}
+
+/* Project Grid */
+.main-content-container .project-page .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Project Card */
+.main-content-container .project-page .projects-grid .project-card {
+  background: var(--color-bg-1);
+  border-radius: 16px;
+  box-shadow: var(--box-shadow-card);
+  padding: 12px;
+  border: 1px solid var(--color-bg-2);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.main-content-container .project-page .projects-grid .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--box-shadow-card);
+}
+.main-content-container .project-page .projects-grid .project-img {
+  height: 200px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+}
+.main-content-container .project-page .projects-grid .project-img-1{
+    background: url(../../public/images/admin_dashboard.png);
+    background-size: cover;
+    background-position: center;
+}
+.main-content-container .project-page .projects-grid .project-img-2{
+    background: url(../../public/images/finance-app-img.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card Content */
+.main-content-container .project-page .projects-grid .project-card h3 {
+  font-size: 24px;
+  color: var(--color-heading-dark);
+  margin-bottom: 16px;
+}
+
+.main-content-container .project-page .projects-grid .project-description {
+  font-size: 18px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+/* Tech Badges */
+.main-content-container .project-page .projects-grid .project-card .tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.main-content-container .project-page .projects-grid .project-card .tech-badges span {
+  background: var(--bg-card);
+  color: var(--color-secondary-light);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--bg-card);
 }
 
 /* ----------------Start Contact page Container-------------------- */

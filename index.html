@@ -11,12 +11,14 @@
 
 <!-- ----------------Start Header Container-------------------- -->
     <header class="top-header-container">
+        <!-- Logo -->
         <div class="logo-container">
             <div>
                 <img src="./public/images/logo.jpg" alt=""><span class="name"><span class="cap">N</span>icholas.</span>
             </div>
             <div class="bi bi-justify toggle-btn" style="display: none;"></div>
         </div>
+        <!-- Navigation List -->
         <nav class="nav-bar-list">
                 <span><a href="#about">About Me</a></span>
                 <span><a href="#education">Education</a></span>
@@ -24,6 +26,7 @@
                 <span><a href="#project">Projects</a></span>
                 <span><a href="#contact">Contact Me</a></span>
         </nav>
+        <!-- Resume download button -->
         <div class="resume-download-btn">
             <button><a href="#resume">Resume</a></button>
         </div>
@@ -34,6 +37,7 @@
 
 <!-- ----------------Start About Page Container-------------------- -->
         <div class="about-page" id="about">
+            <!-- About page Column 1 -->
             <div class="about-column-1">
                 <div class="salutation">
                     <span class="span-1"></span><span>HELLO! MY NAME IS</span>
@@ -55,6 +59,7 @@
                 </div>
             </div>
             
+            <!-- About page Column 2 -->
             <div class="about-column-2">
                 <div class="card-1"></div>
                 <div class="card-2"></div>
@@ -63,11 +68,17 @@
 
 <!-- ----------------Start Education page Container-------------------- -->
         <div class="education-page" id="education">
+
+            <!-- Education Page Heading Section -->
             <div class="learning-path-heading">
                 <span class="line"></span><span class="text">LEARNING PATH</span>
                 <h1 class="title">Education & Skills</h1>
             </div>
+
+            <!-- Education-Skills Container -->
             <div class="education-skills-container">
+
+                <!-- Education Column -->
                 <div class="education-container">
                     <div class="path">
                         <span class="circle"></span>
@@ -100,6 +111,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Skills Container -->
                 <div class="skills-container">
                     <p class="skills-description-text">
                         For 2+ years, I have been continuously learning in the field of front-end and experimenting with new technologies and 
@@ -125,6 +138,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Download CV Button -->
                     <div class="cv-download-btn">
                         <button><a href="#resume">Download My CV</a></button>
                     </div>
@@ -274,9 +289,46 @@
         </div>
 
 <!-- ----------------Start Projects page Container-------------------- -->
-        <div class="project-page" id="project">
-            Project Content
+        <div class="project-page" id="project">  
+            <div class="project-page-heading">
+                <span class="line"></span><span class="text">Practical applications of technical expertise</span>
+                <h1 class="title">Sample Projects</h1>
+            </div>        
+            <div class="projects-grid">
+              <!-- Project 1 -->
+              <div class="project-card">
+                    <div class="project-img project-img-1"></div>
+                  <h3>E-Commerce Dashboard</h3>
+                  <p class="project-description">
+                      A responsive admin dashboard with real-time analytics, inventory management, 
+                      and customer insights. Built with React and integrated with Stripe payments.
+                  </p>
+                  <div class="tech-badges">
+                      <span>React</span>
+                      <span>Node.js</span>
+                      <span>MongoDB</span>
+                      <span>Chart.js</span>
+                  </div>
+              </div>
+              
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img project-img-2"></div>
+                  <h3>Personal Finance Tracker</h3>
+                  <p class="project-description">
+                    Cross-platform expense management app with budget forecasting, 
+                    receipt scanning, and financial reports. Syncs across all devices.
+                  </p>
+                  <div class="tech-badges">
+                    <span>React Native</span>
+                    <span>Firebase</span>
+                    <span>Redux</span>
+                    <span>ML Kit</span>
+                  </div>
+                </div>
+            </div>
         </div>
+
 
 <!-- ----------------Start Contact page Container-------------------- -->
         <div class="contact-page" id="contact">
