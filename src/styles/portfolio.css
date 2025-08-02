@@ -385,32 +385,32 @@ a:hover{
     height: auto;
 }
 #webdevelopment-img{
-    background: url("/public/images/web_development.jpg");
+    background: url(../../public/images/web_development.jpg);
     background-size: cover;
     background-position: center;
 }
 #techinnovation-img{
-    background: url("/public/images/techInnovation.jpg");
+    background: url(../../public/images/techInnovation.jpg);
     background-size: cover;
     background-position: center;
 }
 #ui_ux-img{
-    background: url("/public/images/ui_ux_design.jpg");
+    background: url(../../public/images/ui_ux_design.jpg);
     background-size: cover;
     background-position: center;
 }
 #webperformance-img{
-    background: url("/public/images/webPerformance.jpg");
+    background: url(../../public/images/webPerformance.jpg);
     background-size: cover;
     background-position: center;
 }
 #devops-img{
-    background: url("/public/images/DevOps.jpeg");
+    background: url(../../public/images/DevOps.jpeg);
     background-size: cover;
     background-position: center;
 }
 #continuouslearning-img{
-    background: url("/public/images/continuousLearning.jpg");
+    background: url(../../public/images/continuousLearning.jpg);
     background-size: cover;
     background-position: center;
 }
