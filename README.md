@@ -10,8 +10,8 @@ This website is a single-page application built primarily with front-end technol
 2. Education: A detailed summary of my academic and professional training, including my current pursuits at Zetech University for a          Bachelor's in Computer Science and a scholarship at PLP Academy.
 
 3. Skills: A visual representation of my proficiency in key web technologies:
-    ## HTML: My foundational language for structuring web content.
-    ## CSS: The styling language I use to bring designs to life, including responsive layouts and animations.
+    I). HTML: My foundational language for structuring web content.
+    II). CSS: The styling language I use to bring designs to life, including responsive layouts and animations.
 
 4. Interests: A section highlighting my professional curiosity and areas of focus, such as Web Development, UI/UX Design, and a              commitment to Continuous Learning.
 
