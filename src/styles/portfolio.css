@@ -506,9 +506,6 @@ a:hover{
 .main-content-container .interest-page .interest-cards-container .card .card-image{
     width: 100%;
     height: 200px;
-    background-color: red;
-}
-.main-content-container .interest-page .interest-cards-container .card .card-content{
 }
 
 /* ----------------Start Projects page Container-------------------- */
@@ -723,7 +720,7 @@ a:hover{
 
 /* ================START OF MEDIA QUERIES========== */
 /* Mobile Devices (up to 768px) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     /* Header */
     .top-header-container {
@@ -731,20 +728,17 @@ a:hover{
         height: 15vh;
         padding: 10px 0;
         align-items: flex-start;
-        /* border: 2px solid red; */
         top: 0;
         padding: 0;
     }
     .top-header-container .logo-container{
         margin: 0;
-        /* border: 2px solid red; */
         width: 180px;        
     } 
     .top-header-container .logo-container div{
         width: 100%;
         height: 50px;
         padding: 0;
-        /* border: 2px solid blue; */
     }
     .top-header-container .logo-container div img{
         height: 40px;
@@ -782,13 +776,14 @@ a:hover{
     /* Start About Page Container */
     .main-content-container .about-page{
         grid-template-columns: 12fr;
-        row-gap: 10px;
-        height: calc(100vh - 25vh);
+        row-gap: 0px;
+        height: auto;
         margin-bottom: 20px;
     }
     /* About page Column 1 */
     .main-content-container .about-page .about-column-1{
         grid-row: 2;
+        height: auto;
         
     }
     .main-content-container .about-page .about-column-1 .salutation{
@@ -811,15 +806,15 @@ a:hover{
     .main-content-container .about-page .about-column-2{
         grid-row: 1;
         margin-left: 0px;
-        height: 45vh;
+        margin-bottom: 2px;
     }
     .main-content-container .about-page .about-column-2 .card-1,
     .main-content-container .about-page .about-column-2 .card-2{
-        width: 250px;
-        height: 250px;
+        width: 270px;
+        height: 330px;
         margin: 30px auto;
         border-radius: 8px;
-        left: 15%;
+        left: 7%;
     }
 
     /* Education Page */
@@ -963,39 +958,194 @@ a:hover{
     }
 }
 
-
-/* @media screen and (orientation: portrait) {
-    .main-content-container .about-page{
-        grid-template-columns: 12fr;   
-        align-items: center;
+@media screen and (min-width: 768px) and (max-width: 768px) {
+    /* ----------------Start Main Content Container-------------------- */
+    .main-content-container{
+        height: 75vh;
     }
-.main-content-container .about-page .about-column-1 .fullName{
-    font-size: 25px;
-}
-.main-content-container .about-page .about-column-2 .card-1,
-.main-content-container .about-page .about-column-2 .card-2{
-    margin: 25px auto;
-    width: 250px;
-    height: 300px;
-    left: 15%; 
-}
-.main-content-container .about-page .about-column-2 .card-1{
-    transform: rotate(-5deg);
-}
-.main-content-container .about-page .about-column-1 .social-media{
-    margin-top: 20px;
-}
-.main-content-container .about-page .about-column-1{
-    grid-row: 2;
-    margin-bottom: 0px;
-}
-.main-content-container .about-page .about-column-2{
-    grid-row: 1;
-    height: 40vh;
-    margin-top: 0px;
+    /* Start About Page Container */
+    .main-content-container .about-page{
+        grid-template-columns: 12fr;
+        row-gap: 20px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+    /* About page Column 1 */
+    .main-content-container .about-page .about-column-1{
+        grid-row: 2;
+        margin-top: 20px;
+        height: auto;        
+    }
+    .main-content-container .about-page .about-column-1 .salutation{
+        margin-top: 5px;
+    }
+    .main-content-container .about-page .about-column-1 .fullName{
+        line-height: 30px;
+        padding: 5px;
+        font-size: 25px;
+    }
+    .main-content-container .about-page .about-column-1 .description {
+        word-wrap: break-word;
+    }
+    .main-content-container .about-page .about-column-1 .social-media{
+        margin: 20px;
+        justify-content: space-around;
+    }
+
+    /* About Page Column 2 */
+    .main-content-container .about-page .about-column-2{
+        grid-row: 1;
+        margin-left: 0px;
+        margin: 20px;
+    }
+    .main-content-container .about-page .about-column-2 .card-1,
+    .main-content-container .about-page .about-column-2 .card-2{
+        width: 550px;
+        height: 400px;
+        margin: 47px auto;
+        border-radius: 8px;
+        left: 10%;
+    }
+        /* Education Page */
+    .main-content-container .education-page{
+        height: auto;
+        padding: 15px;
+    }
+    .main-content-container .education-page .learning-path-heading .text{
+        letter-spacing: 3px;
+        font-size: 13px;
+    }
+    .main-content-container .education-page .learning-path-heading .title{
+        padding-bottom: 10px;
+        font-size: 23px;
+    }
+    .main-content-container .education-page .education-skills-container{
+        grid-template-columns: 12fr;
+        padding: 5px;
+        height: inherit;
+    }
+    .main-content-container .education-page .education-skills-container .education-container .path{
+        height: 235px;
+    }
+    .main-content-container .education-page .education-skills-container .education-container .path .circle{
+        width: 25px;
+        height: 25px;
+    }
+    .main-content-container .education-page .education-skills-container .education-container .path .line{
+        height: 77px;
+        margin-left: 11px;
+    }
+    .main-content-container .education-page .education-skills-container .education-container .campus-container{
+        justify-content:flex-start;
+
+    }
+    .main-content-container .education-page .education-skills-container .education-container .campus-container .campus-name h3{
+        line-height: 15px;
+        margin-top: 1px;
+    }
+    .main-content-container .education-page .education-skills-container .education-container .campus-container .period{
+        padding-top: 15px;
+        margin-bottom: 38px;
+    }
+
+    /* Skills Container */
+    .main-content-container .education-page .education-skills-container .skills-container .skills-description-text{
+        margin-bottom: 15px;
+    }
+
+    /* Interest page Container */
+    .main-content-container .interest-page{
+        height: auto;
+    }
+    .main-content-container .interest-page .career-interest-heading .line{
+        margin: 2px 3px ;
+    }
+    .main-content-container .interest-page .career-interest-heading .text{
+        letter-spacing: 3px;
+        font-size: 10px;
+    }
+    .main-content-container .interest-page .career-interest-heading .title{
+        padding-bottom: 5px;
+        font-size: 23px;
+    }
+    .main-content-container .interest-page .interests-grid {
+        grid-template-columns: 12fr;
+        gap: 10px;
+        margin: 0;
+        padding: 0px;
+    }
+    .main-content-container .interest-page .interests-grid .interest-card:hover {
+        transform: translateY(-4px);
+    }
+    .main-content-container .interest-page .interests-grid .interest-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    }
+
+    /* Projects page */
+    .main-content-container .project-page{
+        height: auto;
+        padding: 10px;
+    }
+    .main-content-container .project-page .project-page-heading .line{
+        margin: 2px 3px ;
+    }
+    .main-content-container .project-page .project-page-heading .text{
+        letter-spacing: 2px;
+        font-size: 7px;
+        padding: 5px;
+    }
+    .main-content-container .project-page .project-page-heading .title{
+        padding-bottom: 10px;
+        font-size: 23px;
+        margin-top: 8px;
+    }
+    /* Project Grid */
+    .main-content-container .project-page .projects-grid {
+        grid-template-columns: 12fr;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    /* Contact page */
+    .main-content-container .contact-page{
+        height: auto;
+        padding: 10px;
+    }
+    .main-content-container .contact-page .contact-info-container{
+        grid-template-columns: 12fr;
+        gap: 15px;
+        padding: 5px;
+        margin-top: 10px;
+    }
+    .main-content-container .contact-page .contact-form{
+        grid-row: 2;
+        padding: 0px 5px;
+    }
+    .main-content-container .contact-page .dev-info{
+        justify-content: flex-start;
+        padding: 0px;
+    }
+    .main-content-container .contact-page .dev-info .info{
+        margin-bottom: 20px;
+    }
+
+ /* ----------------Start Footer page Container-------------------- */
+    .main-content-container .footer-page{
+        height: auto;
+        padding: 10px;
+    }
+    .main-content-container .footer-page .social-media-icons{
+        flex-wrap: wrap;
+        margin: 10px auto 0px auto;
+        padding: 20px;
+        width: auto;
+    }
+    .main-content-container .footer-page .copyRights{
+        font-size: 13px;
+        font-weight: 700;
+    }
+
 }
 
-} */
-
-@media screen and (orientation: landscape) {}
 /* ================Media Queries End========== */
